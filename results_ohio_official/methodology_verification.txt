@@ -1,0 +1,48 @@
+================================================================================
+OFFICIAL OHIOT1DM TEST-SET EVALUATION: METHODOLOGY VERIFICATION & RESEARCH LOG
+================================================================================
+Generated: 2026-10-04 01:26:38
+Cohort: 12 OhioT1DM Patients (540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, 596)
+
+1. DATASET FILES & SEPARATION
+   - Training: Strict population training on 11 other patients' '*-ws-training.xml' files ONLY.
+   - Testing: Held-out patient's official '*-ws-testing.xml' file ONLY.
+   - Zero testing data used for model fitting, preprocessing, hyperparameter selection, or early stopping.
+
+2. PREPROCESSING & SCALING
+   - SimpleImputer(strategy='mean', keep_empty_features=True) fitted ONLY on 11 training patients.
+   - StandardScaler fitted ONLY on training-imputed features.
+   - Zero test data participated in preprocessing fitting.
+
+3. CAUSAL FEATURE ENGINEERING & BOUNDARY
+   - 47 causal predictors identical to Objective 1:
+     * Raw: glucose, bolus, carbs, heart_rate
+     * Derived: iob (exponential decay DIA=240m), glucose_diff1, glucose_diff2,
+       glucose_roll_mean_30, glucose_roll_std_30, hour_sin, hour_cos
+     * Lags (1..12): glucose, glucose_diff1, iob
+     * Target: glucose 30-min ahead = shift(-6)
+   - Boundary: Test features generated using official test period plus the strictly permissible
+     4-hour historical context immediately preceding test start from the patient's training file.
+   - Target Isolation: Target column excluded from predictor matrix.
+
+4. SAMPLE EXCLUSION & COMMON EVALUATION MASK
+   - Total Official Test Grid Rows: 35,925
+   - Evaluated Test Samples (Common Mask): 31,848 (88.65%)
+   - Excluded Rows (Sensor dropouts / boundary): 4,077 (11.35%)
+   - Common Mask: np.isfinite(y_test) & np.isfinite(pred_persistence) applied across ALL 6 models.
+
+5. CRITICAL LEAKAGE AUDIT STATUS
+   - Future Glucose Mutation Check: PASS
+   - Training Feature Isolation Check: PASS
+   - Heart-Rate Forward-Fill Check: PASS
+   - Imputer & Scaler Statistics Invariance: PASS
+   - Model Parameter Invariance: PASS
+   - First Test Row History Permissibility: PASS
+   - Target Leakage Check: PASS
+   - OFFICIAL OHIO TEST LEAKAGE AUDIT: PASS
+
+6. SCIENTIFIC COMPARISON NOTE
+   - This experiment uses the official OhioT1DM testing files and is separate from the
+     previously completed concatenated-patient LOSO experiment (Objective 1).
+   - See 'comparison_with_loso.csv' for side-by-side numerical reporting.
+================================================================================
