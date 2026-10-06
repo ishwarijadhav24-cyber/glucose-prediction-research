@@ -1,0 +1,12 @@
+PASS  23 x 6 patient-model rows  (138 rows, 23 patients)
+PASS  MAIN subset 19 x 6  (114 rows)
+PASS  no duplicate patient-model rows
+PASS  no NaN or infinite metric values  (0 bad)
+PASS  no duplicate prediction rows
+PASS  summary main: means and SDs equal recomputed patient-level values
+PASS  summary all: means and SDs equal recomputed patient-level values
+PASS  Persistence predictions equal glucose at t for every evaluated row  (0 mismatches over 105,423 rows)
+PASS  model file hashes equal model_hashes.json  (9 files; mismatched []; unhashed [])
+PASS  train_final_ohio.py (and objective3_common.py) contain no HUPA-UCM path or import  ([])
+PASS  n_samples per patient equals n_evaluable_points in hupa_parser_check.csv  (differs: [])
+OVERALL: PASS (11/11)

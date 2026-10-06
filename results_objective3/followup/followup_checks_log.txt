@@ -1,0 +1,6 @@
+PASS  1 condition A reproduces Objective 1 (mean MARD within 0.1)  (differences {'Persistence': 0.0, 'Ridge': -0.0, 'RandomForest': 0.0, 'MLP': 0.0, 'LightGBM': -0.0086, 'Stacking': -0.0017})
+PASS  2 12 patients x 6 models x 3 conditions, no duplicates, no NaN/inf  (216 rows)
+PASS  3 condition C median interval 14-16 min for every patient and offset  (range 15.00-15.00 min)
+PASS  4 Persistence equals glucose at t on every evaluated row (A, B, C)  (0 mismatches)
+PASS  5 no HUPA-UCM data path or parser import in this script  (lines [])
+OVERALL: PASS
