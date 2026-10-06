@@ -1,0 +1,6 @@
+objective,patients,rows,note
+1 LOSO,12,167376,evaluated test rows summed over the 12 folds (common mask)
+1/3 training (all 12),12,169221,"feature rows, OhioT1DM all files"
+2 personalization,12,83646,"evaluation rows per level; levels [np.int64(0), np.int64(5), np.int64(10), np.int64(20), np.int64(30), np.int64(50)]"
+3 HUPA MAIN,19,99855,evaluable points
+3 HUPA ALL,23,105423,evaluable points

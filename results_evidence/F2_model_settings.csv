@@ -1,0 +1,10 @@
+model,settings
+imputer,"SimpleImputer(strategy='mean', keep_empty_features=True) + np.nan_to_num(nan=0.0)"
+scaler,StandardScaler()
+Ridge,"{""alpha"": 1.0}"
+RandomForest,"{""n_estimators"": 50, ""max_depth"": 15, ""min_samples_leaf"": 5, ""max_samples"": 0.5, ""n_jobs"": -1}"
+MLP,"{""hidden_layer_sizes"": [128, 64], ""max_iter"": 150, ""early_stopping"": true, ""n_iter_no_change"": 10}"
+LightGBM,"{""n_estimators"": 150, ""learning_rate"": 0.05, ""num_leaves"": 31, ""min_child_samples"": 20, ""n_jobs"": -1, ""verbose"": -1, ""early_stopping"": ""none (plain fit, as Objective 1)""}"
+Stacking,"{""estimators"": ""Ridge(1.0) + RF(30, depth 12, leaf 5, max_samples 0.5) + LGBM(100, lr 0.05, 31 leaves)"", ""final_estimator"": ""Ridge(alpha=1.0)"", ""cv"": 3, ""n_jobs"": 1}"
+Persistence,prediction = glucose at time t
+random_state,42

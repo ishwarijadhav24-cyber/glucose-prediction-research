@@ -1,0 +1,77 @@
+{
+ "training_data": "OhioT1DM, all 12 patients, all files in data/OhioT1DM (training + testing XML)",
+ "patients": [
+  "540",
+  "544",
+  "552",
+  "559",
+  "563",
+  "567",
+  "570",
+  "575",
+  "584",
+  "588",
+  "591",
+  "596"
+ ],
+ "n_training_samples": 169221,
+ "n_features": 47,
+ "models": [
+  "Persistence",
+  "Ridge",
+  "RandomForest",
+  "MLP",
+  "LightGBM",
+  "Stacking"
+ ],
+ "model_settings": {
+  "imputer": "SimpleImputer(strategy='mean', keep_empty_features=True) + np.nan_to_num(nan=0.0)",
+  "scaler": "StandardScaler()",
+  "Ridge": {
+   "alpha": 1.0
+  },
+  "RandomForest": {
+   "n_estimators": 50,
+   "max_depth": 15,
+   "min_samples_leaf": 5,
+   "max_samples": 0.5,
+   "n_jobs": -1
+  },
+  "MLP": {
+   "hidden_layer_sizes": [
+    128,
+    64
+   ],
+   "max_iter": 150,
+   "early_stopping": true,
+   "n_iter_no_change": 10
+  },
+  "LightGBM": {
+   "n_estimators": 150,
+   "learning_rate": 0.05,
+   "num_leaves": 31,
+   "min_child_samples": 20,
+   "n_jobs": -1,
+   "verbose": -1,
+   "early_stopping": "none (plain fit, as Objective 1)"
+  },
+  "Stacking": {
+   "estimators": "Ridge(1.0) + RF(30, depth 12, leaf 5, max_samples 0.5) + LGBM(100, lr 0.05, 31 leaves)",
+   "final_estimator": "Ridge(alpha=1.0)",
+   "cv": 3,
+   "n_jobs": 1
+  },
+  "Persistence": "prediction = glucose at time t",
+  "random_state": 42
+ },
+ "random_state": 42,
+ "versions": {
+  "python": "3.13.9",
+  "lightgbm": "4.7.0",
+  "scikit-learn": "1.7.2",
+  "numpy": "2.3.5",
+  "pandas": "2.3.3"
+ },
+ "python_executable": "D:\\anaconda3\\python.exe",
+ "note": "Objective 1 was run in a different environment; its LightGBM version was not recorded."
+}

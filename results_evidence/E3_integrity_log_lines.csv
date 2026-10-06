@@ -1,0 +1,33 @@
+log,line
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  1 SCHEMA            PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  2 FEATURES          PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  3 CAUSALITY         PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  4 RAW GLUCOSE ONLY  PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  5 CLIPPING          PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  6 UNITS             PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  7 EXCLUSIONS        PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  8 NO IMPUTATION     PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK  9 NON-EMPTY         PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK 10 DATES PARSED      PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK 11 DATE SANITY       PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK 12 WINDOW            PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),CHECK 13 COUNTS            PASS
+Parser check (results_objective3/hupa_parser_check_log.txt),OVERALL: PASS
+Objective 3 audit (results_objective3/audit_objective3_log.txt),"PASS  23 x 6 patient-model rows  (138 rows, 23 patients)"
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  MAIN subset 19 x 6  (114 rows)
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  no duplicate patient-model rows
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  no NaN or infinite metric values  (0 bad)
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  no duplicate prediction rows
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  summary main: means and SDs equal recomputed patient-level values
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  summary all: means and SDs equal recomputed patient-level values
+Objective 3 audit (results_objective3/audit_objective3_log.txt),"PASS  Persistence predictions equal glucose at t for every evaluated row  (0 mismatches over 105,423 rows)"
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  model file hashes equal model_hashes.json  (9 files; mismatched []; unhashed [])
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  train_final_ohio.py (and objective3_common.py) contain no HUPA-UCM path or import  ([])
+Objective 3 audit (results_objective3/audit_objective3_log.txt),PASS  n_samples per patient equals n_evaluable_points in hupa_parser_check.csv  (differs: [])
+Objective 3 audit (results_objective3/audit_objective3_log.txt),OVERALL: PASS (11/11)
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),"PASS  1 condition A reproduces Objective 1 (mean MARD within 0.1)  (differences {'Persistence': 0.0, 'Ridge': -0.0, 'RandomForest': 0.0, 'MLP': 0.0, 'LightGBM': -0.0086, 'Stacking': -0.0017})"
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),"PASS  2 12 patients x 6 models x 3 conditions, no duplicates, no NaN/inf  (216 rows)"
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),PASS  3 condition C median interval 14-16 min for every patient and offset  (range 15.00-15.00 min)
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),"PASS  4 Persistence equals glucose at t on every evaluated row (A, B, C)  (0 mismatches)"
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),PASS  5 no HUPA-UCM data path or parser import in this script  (lines [])
+Objective 3 follow-up (results_objective3/followup/followup_checks_log.txt),OVERALL: PASS

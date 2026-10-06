@@ -1,0 +1,95 @@
+======================================================================
+SELF-TEST: each check must detect an injected fault
+======================================================================
+  CHECK  1 SCHEMA            detects injected fault: YES
+  CHECK  2 FEATURES          detects injected fault: YES
+  CHECK  3 CAUSALITY         detects injected fault: YES
+  CHECK  4 RAW GLUCOSE ONLY  detects injected fault: YES
+  CHECK  5 CLIPPING          detects injected fault: YES
+  CHECK  6 UNITS             detects injected fault: YES
+  CHECK  7 EXCLUSIONS        detects injected fault: YES
+  CHECK  8 NO IMPUTATION     detects injected fault: YES
+  CHECK  9 NON-EMPTY         detects injected fault: YES
+  CHECK 10 DATES PARSED      detects injected fault: YES
+  CHECK 11 DATE SANITY       detects injected fault: YES
+  CHECK 12 WINDOW            detects injected fault: YES
+  CHECK 13 COUNTS            detects injected fault: YES
+
+======================================================================
+PER-PATIENT CHECKS (25 patients)
+======================================================================
+  HUPA0001P [included] OK
+  HUPA0002P [included] OK
+  HUPA0003P [included] OK
+  HUPA0004P [included] OK
+  HUPA0005P [included] OK
+  HUPA0006P [included] OK
+  HUPA0007P [included] OK
+  HUPA0009P [excluded_no_cgm] OK (HUPA0009P: no type-0 FreeStyle Libre readings (1 Libre file(s)))
+  HUPA0010P [excluded_no_cgm] OK (HUPA0010P: no type-0 FreeStyle Libre readings (1 Libre file(s)))
+  HUPA0011P [excluded_missing_events] OK
+  HUPA0014P [included] OK
+  HUPA0015P [excluded_missing_events] OK
+  HUPA0016P [included] OK
+  HUPA0017P [included] OK
+  HUPA0018P [excluded_missing_events] OK
+  HUPA0019P [included] OK
+  HUPA0020P [excluded_missing_events] OK
+  HUPA0021P [included] OK
+  HUPA0022P [included] OK
+  HUPA0023P [included] OK
+  HUPA0024P [included] OK
+  HUPA0025P [included] OK
+  HUPA0026P [included] OK
+  HUPA0027P [included] OK
+  HUPA0028P [included] OK
+
+======================================================================
+CHECKS
+======================================================================
+CHECK  1 SCHEMA            PASS
+CHECK  2 FEATURES          PASS
+CHECK  3 CAUSALITY         PASS
+CHECK  4 RAW GLUCOSE ONLY  PASS
+CHECK  5 CLIPPING          PASS
+CHECK  6 UNITS             PASS
+CHECK  7 EXCLUSIONS        PASS
+CHECK  8 NO IMPUTATION     PASS
+CHECK  9 NON-EMPTY         PASS
+CHECK 10 DATES PARSED      PASS
+CHECK 11 DATE SANITY       PASS
+CHECK 12 WINDOW            PASS
+CHECK 13 COUNTS            PASS
+OVERALL: PASS
+
+  patient                  status layout                   date_format  readings_in_window  window_days  coverage_pct  n_evaluable_points
+HUPA0001P                included    OLD                %Y/%m/%d %H:%M                1325         14.2          97.1                1545
+HUPA0002P                included    OLD                %Y/%m/%d %H:%M                1047         11.0          98.8                1152
+HUPA0003P                included    OLD                %Y/%m/%d %H:%M                1251         13.1          99.6                1474
+HUPA0004P                included    OLD                %Y/%m/%d %H:%M                 903         11.1          85.1                1079
+HUPA0005P                included    OLD                %Y/%m/%d %H:%M                1274         13.4          99.1                1505
+HUPA0006P                included    OLD                %Y/%m/%d %H:%M                 727          7.9          95.3                 866
+HUPA0007P                included    OLD                %Y/%m/%d %H:%M                1277         13.4          99.4                1501
+HUPA0009P         excluded_no_cgm                                                        0         13.2           0.0                   0
+HUPA0010P         excluded_no_cgm                                                        0         10.3           0.0                   0
+HUPA0011P excluded_missing_events    OLD                %Y/%m/%d %H:%M                1277         13.3          99.8                1512
+HUPA0014P                included    OLD                %Y/%m/%d %H:%M                1074         13.3          84.2                1241
+HUPA0015P excluded_missing_events    OLD                %d/%m/%y %H:%M                1221         13.2          96.6                1471
+HUPA0016P                included    OLD                %Y/%m/%d %H:%M                1091         13.3          85.4                1240
+HUPA0017P                included    OLD                %Y/%m/%d %H:%M                1112         12.5          92.7                1285
+HUPA0018P excluded_missing_events    OLD                %d/%m/%y %H:%M                1272         13.5          98.0                1484
+HUPA0019P                included    OLD                %d/%m/%y %H:%M                1233         12.9          99.7                1304
+HUPA0020P excluded_missing_events    OLD                %d/%m/%y %H:%M                 946          9.9          99.2                1101
+HUPA0021P                included    OLD                %Y/%m/%d %H:%M                 776          8.1          99.4                 946
+HUPA0022P                included    OLD                %d/%m/%y %H:%M                1295         14.0          96.6                1512
+HUPA0023P                included    OLD                %d/%m/%y %H:%M                1298         13.6          99.4                1523
+HUPA0024P                included    OLD                %d/%m/%y %H:%M                 959         10.1          99.2                1101
+HUPA0025P                included    NEW                %d/%m/%y %H:%M                1323         13.9          99.1                1543
+HUPA0026P                included    NEW                %d/%m/%y %H:%M               11149        141.0          82.4               12709
+HUPA0027P                included    NEW %d/%m/%y %H:%M+%d-%m-%Y %H:%M               51581        574.0          93.6               59671
+HUPA0028P                included    NEW                %d-%m-%Y %H:%M                5696         89.9          66.0                6658
+
+Total evaluable points, MAIN (19 patients): 99855
+Total evaluable points, ALL  (23 patients): 105423
+Invalid boluses (<= 0) removed: HUPA0017P (4)
+Patients below 70% coverage: HUPA0028P (66.0%)

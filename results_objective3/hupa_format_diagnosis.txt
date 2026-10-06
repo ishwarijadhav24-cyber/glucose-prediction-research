@@ -1,0 +1,775 @@
+
+======================================================================
+PATIENT: HUPA0001P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0001P/free_style_sensor\HUPA0001P_free_style_sensor_2018-06-13_2018-06-27.csv
+     Size: 69368 bytes  |  Lines: 1550
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: HUPA0001P;;;;;;;;;;;;;;;;;;
+
+  2: ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (raciones);Insulina de acción lenta sin valor numérico;Insulina de acción lenta (unidades);Notas;Gluco
+  3: 48745;2018/06/13 17:19;0;488;;;;;;;;;;;;;;;
+
+  4: 48746;2018/06/13 17:34;0;469;;;;;;;;;;;;;;;
+
+  5: 48747;2018/06/13 17:49;0;436;;;;;;;;;;;;;;;
+
+  6: 48748;2018/06/13 18:10;1;;435;;;;;;;;;;;;;;
+
+  7: 48761;2018/06/13 18:04;0;418;;;;;;;;;;;;;;;
+
+  8: 48762;2018/06/13 18:19;0;397;;;;;;;;;;;;;;;
+
+  9: 48763;2018/06/13 18:34;0;358;;;;;;;;;;;;;;;
+
+  10: 48764;2018/06/13 18:49;0;326;;;;;;;;;;;;;;;
+
+  11: 48765;2018/06/13 19:06;1;;306;;;;;;;;;;;;;;
+
+  12: 48780;2018/06/13 19:05;0;297;;;;;;;;;;;;;;;
+
+  13: 48781;2018/06/13 19:20;0;293;;;;;;;;;;;;;;;
+
+  14: 48782;2018/06/13 19:35;0;271;;;;;;;;;;;;;;;
+
+  15: 48783;2018/06/13 19:50;0;221;;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (r
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'0': 1331, '1': 217}
+     Glucose-like cols (40-500): [3, 4]
+  8. Date format detected: no data  |  Ambiguous: False
+  9. Parsed range (day-first):   None to None
+ 10. Preprocessed range: 2018-06-13 18:40:00 to 2018-06-27 23:55:00
+
+[MEDTRONIC] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0001P/medtronic_insulin_pump\HUPA0001P_medtronic_insulin_pump_&_sensor_2018-06-13_2018-06-27.csv
+     Size: 1233233 bytes  |  Lines: 14701
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: Last Name;First Name;Patient ID;Start Date;End Date;;Device;Paradigm Veo - 754;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  2: HUPA0001P;100222;10/05/2018 0:00;28/06/2018 23:59;;Serial Number;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  3:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  4: Device data shown may exceed selected date range.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  5:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  6: -------;Paradigm Veo - 754;Pump;;------- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume Delivered (U);Bolus Duration (h:mm:ss);Prime Type;Prime Volume Delivered (U);Alarm;Suspend;Rewind;B
+  8: 0.00000;28/06/2018;12:38:36;;;;;;;;Normal;0.50;0.50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  9: 100.000;28/06/2018;12:35:38;;;;;;;;;;;;;;HIGH SG;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  10: 200.000;28/06/2018;12:21:39;;;;;;;;;;;;;;HIGH PREDICTED;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  11: 300.000;28/06/2018;11:05:53;;;;;;;;Normal;2.50;2.50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  12: 400.000;28/06/2018;11:05:53;;;;;;;;;;;;;;;;;2.70;140.00;110.00;1.00;75.00;3.00;91.00;-0.30;3.00;0.00;;;;;;;;;;;;;;;;;;
+
+  13: 500.000;28/06/2018;11:00:21;;91.00;C00BE0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  14: 600.000;28/06/2018;11:00:21;;;;;;;;;;;;;;;;;;;;;;;;;;;91.00;;;;;;;;;;;;;;;;;
+
+  15: 700.000;28/06/2018;9:00:00;;;;0.45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7. Real data header at row 6: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume
+     Columns: 47
+     Sensor glucose col: 30 ('Sensor Glucose (mg/dL)')
+     Non-empty sensor values: 11957
+  8. Date format: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)
+     Sample timestamps: ['28/06/2018 12:38:36', '28/06/2018 12:35:38', '28/06/2018 12:21:39']
+
+======================================================================
+PATIENT: HUPA0009P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0009P/free_style_sensor\HUPA0009P_free_style_sensor_2018-09-19_2018-10-03_EMPTY.csv
+     Size: 633 bytes  |  Lines: 4
+  2. Encoding: utf-8
+  3. Delimiter: '\t'
+  4. First 15 lines:
+  1: HUPA0009P está vacío, Este fichero es para evitar errores en el preprocesado
+
+  2: ID	Hora	Tipo de registro	Histórico glucosa (mg/dL)	Glucosa leída (mg/dL)	Insulina de acción rápida sin valor numérico	Insulina de acción rápida (unidades)	Alimentos sin valor numérico	Carbohidratos (gramos)	Insulina de acción lenta sin valor numérico	Insulina de acción lenta (unidades)	Notas	Glucosa
+  3: 40242	2018/09/19 15:10	4			0													
+
+  4: 40242	2018/09/19 15:10	5					0						
+  5. Header (non-empty line 19 cols): ID	Hora	Tipo de registro	Histórico glucosa (mg/dL)	Glucosa leída (mg/dL)	Insulina de acción rápida sin valor numérico	Insulina de acción rápida (unidades)	Alimentos sin valor numérico	Carbohidratos (g
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'4': 1, '5': 1}
+     Glucose-like cols (40-500): []
+  8. Date format detected: no data  |  Ambiguous: False
+  9. Parsed range (day-first):   None to None
+ 10. Preprocessed range: 2018-09-19 14:35:00 to 2018-10-02 20:10:00
+
+[MEDTRONIC] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0009P/medtronic_insulin_pump\HUPA0009P_medtronic_insulin_pump_&_sensor_2018-09-19_2018-10-03.csv
+     Size: 139759 bytes  |  Lines: 1823
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: Last Name;First Name;Patient ID;Start Date;End Date;;Device;Paradigm Veo - 754;OneTouch Ultra 2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  2: ;;;19/09/2018 0:00;04/10/2018 23:59;;Serial Number;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  3:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  4: Device data shown may exceed selected date range.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  5:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  6: -------;Paradigm Veo - 754;Pump;;------- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume Delivered (U);Bolus Duration (h:mm:ss);Prime Type;Prime Volume Delivered (U);Alarm;Suspend;Rewind;B
+  8: 0;04/10/2018;12:00:00;;;;1.3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  9: 1;04/10/2018;12:00:00;;;;1.3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  10: 2;04/10/2018;10:39:49;;;;;;;;Normal;1.8;1.8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  11: 3;04/10/2018;10:39:48;;;;;;;;;;;;;;;;;1.8;130;100;1.5;60;1;176;0.7;1.5;0.4;;;;;;;;;;;;;;;;;;
+
+  12: 4;04/10/2018;10:39:40;;;;;;;;;;;;;;;;;;;;;;;;;;;176;;;;;;;;;;;;;;;;;
+
+  13: 5;04/10/2018;9:22:28;;;;;;;;Normal;0.5;0.5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  14: 6;04/10/2018;9:22:28;;;;;;;;;;;;;;;;;0.5;130;100;1.5;60;0;189;0.9;0;0.4;;;;;;;;;;;;;;;;;;
+
+  15: 7;04/10/2018;9:22:25;;;;;;;;;;;;;;;;;;;;;;;;;;;189;;;;;;;;;;;;;;;;;
+
+  7. Real data header at row 6: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume
+     Columns: 47
+     Sensor glucose col: 30 ('Sensor Glucose (mg/dL)')
+     Non-empty sensor values: 0
+  8. Date format: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)
+     Sample timestamps: ['04/10/2018 12:00:00', '04/10/2018 12:00:00', '04/10/2018 10:39:49']
+
+======================================================================
+PATIENT: HUPA0010P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0010P/free_style_sensor\HUPA0010P_free_style_sensor_2018-11-07_2018-11-21.csv
+     Size: 18876 bytes  |  Lines: 392
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: HUPA0010P;;;;;;;;;;;;;;;;;;;
+
+  2: ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (raciones);Insulina de acción lenta sin valor numérico;Insulina de acción lenta (unidades);Notas;Gluco
+  3: 4747;2018/11/07 15:20;6;;;;;;;;;;;;;;;7/11/18 16:18;7/11/18 15:20
+
+  4: 4748;2018/11/07 16:48;1;;120;;;;;;;;;;;;;;;;;;
+
+  5: 4750;2018/11/07 17:47;5;;;;;1;;;;;;;;;;;;;;;
+
+  6: 4750;2018/11/07 17:47;1;;68;;;;;;;;;;;;;;;;;;
+
+  7: 4752;2018/11/07 17:54;1;;62;;;;;;;;;;;;;;;;;;
+
+  8: 4754;2018/11/07 18:25;1;;51;;;;;;;;;;;;;;;;;;
+
+  9: 4756;2018/11/07 18:25;5;;;;;1;;;;;;;;;;;;;;;
+
+  10: 4756;2018/11/07 18:25;1;;51;;;;;;;;;;;;;;;;;;
+
+  11: 4759;2018/11/07 18:57;1;;93;;;;;;;;;;;;;;;;;;
+
+  12: 4761;2018/11/07 19:52;4;;;1;;;;;;;;;;;;;;;;;
+
+  13: 4761;2018/11/07 19:52;1;;165;;;;;;;;;;;;;;;;;;
+
+  14: 4763;2018/11/07 20:32;4;;;1;;;;;;;;;;;;;;;;;
+
+  15: 4763;2018/11/07 20:32;1;;271;;;;;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (r
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'1': 243, '4': 75, '5': 71, '6': 1}
+     Glucose-like cols (40-500): [4]
+  8. Date format detected: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)  |  Ambiguous: True
+     Sample timestamps: ['7/11/18 15:20']
+  9. Parsed range (day-first):   2018-11-07 15:20:00 to 2018-11-07 15:20:00
+     Parsed range (month-first): 2018-07-11 15:20:00 to 2018-07-11 15:20:00
+ 10. Preprocessed range: 2018-11-07 15:35:00 to 2018-11-17 23:30:00
+     Raw DOES NOT COVER preprocessed period.
+
+[MEDTRONIC] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0010P/medtronic_insulin_pump\HUPA0010P_medtronic_insulin_pump_&_sensor_2018-11-07_2018-11-21.csv
+     Size: 62806 bytes  |  Lines: 809
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: Last Name;First Name;Patient ID;Start Date;End Date;;Device;Paradigm Veo - 754;OneTouch Ultra 2;OneTouch Ultra 2;OneTouch Ultra 2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  2: HUPA0010P;0;0;7/11/18 0:00;21/11/18 23:59;;Serial Number;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  3:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  4: Device data shown may exceed selected date range.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  5:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  6: -------;Paradigm Veo - 754;Pump;;------- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume Delivered (U);Bolus Duration (h:mm:ss);Prime Type;Prime Volume Delivered (U);Alarm;Suspend;Rewind;B
+  8: 32;21/11/18;22:48:16;;;;;;;;Normal;1.4;1.4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  9: 33;21/11/18;22:48:16;;;;;;;;;;;;;;;;;1.4;130;110;0.7;60;2;111;0;1.4;0.05;;;;;;;;;;;;;;;;;;
+
+  10: 34;21/11/18;22:48:09;;;;;;;;;;;;;;;;;;;;;;;;;;;111;;;;;;;;;;;;;;;;;
+
+  11: 35;21/11/18;21:00:00;;;;0.7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  12: 36;21/11/18;21:00:00;;;;0.7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  13: 37;21/11/18;19:37:49;;;;;;;;Normal;0.28;0.28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  14: 38;21/11/18;19:37:48;;;;;;;;;;;;;;;;;0.28;130;110;0.7;60;0;147;0.28;0;0;;;;;;;;;;;;;;;;;;
+
+  15: 39;21/11/18;19:37:46;;;;;;;;;;;;;;;;;0.28;130;110;0.7;60;0;147;0.28;0;0;;;;;;;;;;;;;;;;;;
+
+  7. Real data header at row 6: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume
+     Columns: 47
+     Sensor glucose col: 30 ('Sensor Glucose (mg/dL)')
+     Non-empty sensor values: 0
+  8. Date format: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)
+     Sample timestamps: ['21/11/18 22:48:16', '21/11/18 22:48:16', '21/11/18 22:48:09']
+
+======================================================================
+PATIENT: HUPA0011P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0011P/free_style_sensor\HUPA0011P_free_style_sensor_2018-11-07_2018-11-21.csv
+     Size: 225712 bytes  |  Lines: 5025
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: HUPA0011P
+
+  2: ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (raciones);Insulina de acción lenta sin valor numérico;Insulina de acción lenta (unidades);Notas;Gluco
+  3: 37702;2016/05/25 11:57;0;53;;;;;;;;;;;;;;;
+
+  4: 37703;2016/05/25 12:16;1;;67;;;;;;;;;;;;;;
+
+  5: 37747;2016/05/25 12:12;0;72;;;;;;;;;;;;;;;
+
+  6: 37748;2016/05/25 12:27;0;101;;;;;;;;;;;;;;;
+
+  7: 37749;2016/05/25 12:42;0;123;;;;;;;;;;;;;;;
+
+  8: 37750;2016/05/25 12:57;0;133;;;;;;;;;;;;;;;
+
+  9: 37751;2016/05/25 13:12;0;144;;;;;;;;;;;;;;;
+
+  10: 37752;2016/05/25 13:27;0;169;;;;;;;;;;;;;;;
+
+  11: 37753;2016/05/25 13:42;0;199;;;;;;;;;;;;;;;
+
+  12: 37754;2016/05/25 14:11;4;;;;7,0;;;;;;;;;;;;
+
+  13: 37754;2016/05/25 14:11;5;;;;;;6,0;;;;;;;;;;
+
+  14: 37754;2016/05/25 14:11;1;;215;;;;;;;;;;;;;;
+
+  15: 37931;2016/05/25 13:57;0;221;;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (r
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'0': 4266, '1': 668, '4': 43, '5': 43, '6': 3}
+     Glucose-like cols (40-500): [3, 4]
+  8. Date format detected: YYYY/MM/DD HH:MM  |  Ambiguous: False
+     Sample timestamps: ['2018/06/11 15:46', '2018/09/12 20:43', '2018/11/07 14:48']
+  9. Parsed range (day-first):   2018-07-11 14:48:00 to 2018-12-09 20:43:00
+ 10. Preprocessed range: 2018-11-07 15:55:00 to 2018-11-20 23:45:00
+     Raw COVERS or EXCEEDS preprocessed period.
+
+[MEDTRONIC] 0 file(s)
+
+======================================================================
+PATIENT: HUPA0016P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0016P/free_style_sensor\HUPA0016P_free_style_sensor_2019-03-27_2019-04-11.csv
+     Size: 386428 bytes  |  Lines: 6628
+  2. Encoding: utf-8
+  3. Delimiter: '\t'
+  4. First 15 lines:
+  1: HUPA0016P
+
+  2: ID	Hora	Tipo de registro	Histórico glucosa (mg/dL)	Glucosa leída (mg/dL)	Insulina de acción rápida sin valor numérico	Insulina de acción rápida (unidades)	Alimentos sin valor numérico	Carbohidratos (raciones)	Insulina de acción lenta sin valor numérico	Insulina de acción lenta (unidades)	Notas	Gluco
+  3: 11781	2019/03/27 15:19	6															2019/03/27 16:07	2019/03/27 15:19
+
+  4: 11932	2019/03/27 16:42	1		56														
+
+  5: 12046	2019/03/27 19:07	1		181														
+
+  6: 12105	2019/03/27 19:50	1		129														
+
+  7: 12127	2019/03/27 21:01	1		75														
+
+  8: 12148	2019/03/27 22:03	1		73														
+
+  9: 12171	2019/03/27 23:16	1		64														
+
+  10: 12220	2019/03/28 07:08	1		98														
+
+  11: 12299	2019/03/28 08:20	1		70														
+
+  12: 12323	2019/03/28 09:31	1		67														
+
+  13: 12343	2019/03/28 09:55	1		58														
+
+  14: 12433	2019/03/28 10:27	1		56														
+
+  15: 12456	2019/03/28 11:35	1		106														
+
+  5. Header (non-empty line 19 cols): ID	Hora	Tipo de registro	Histórico glucosa (mg/dL)	Glucosa leída (mg/dL)	Insulina de acción rápida sin valor numérico	Insulina de acción rápida (unidades)	Alimentos sin valor numérico	Carbohidratos (r
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'0': 5949, '1': 514, '4': 91, '5': 68, '6': 4}
+     Glucose-like cols (40-500): [3, 4]
+  8. Date format detected: YYYY/MM/DD HH:MM  |  Ambiguous: False
+     Sample timestamps: ['2019/03/27 15:19', '2019/03/31 08:49', '2016/04/02 09:09']
+  9. Parsed range (day-first):   2016-04-02 09:09:00 to 2019-03-31 08:49:00
+ 10. Preprocessed range: 2019-03-27 16:15:00 to 2019-04-09 23:45:00
+     Raw DOES NOT COVER preprocessed period.
+
+[MEDTRONIC] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0016P/medtronic_insulin_pump\HUPA0016P_medtronic_insulin_pump_&_sensor_2019-03-27_2019-04-11.csv
+     Size: 272182 bytes  |  Lines: 3203
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: Last Name;First Name;Patient ID;Start Date;End Date;;Device;MiniMed 640G, MMT-1512/1712;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  2: ;;174493;27/03/2019 0:00;12/04/2019 23:59;;Serial Number;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  3:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  4: Device data shown may exceed selected date range.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  5:  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  6: -------;MiniMed 640G MMT-1512/1712;Pump;;------- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume Delivered (U);Bolus Duration (h:mm:ss);Prime Type;Prime Volume Delivered (U);Alarm;Suspend;Rewind;B
+  8: 366;12/04/2019;8:54:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;TEMPORARY;;;;
+
+  9: 367;12/04/2019;8:54:36;;;;;;;;;;;;;;Other Alarm Code: 112;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  10: 368;12/04/2019;8:49:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;DEVICE_ERROR;;;
+
+  11: 369;12/04/2019;8:49:03;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;TEMPORARY;;;;
+
+  12: 370;12/04/2019;8:48:52;;;;;;;;;;;;;;Other Alarm Code: 112;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  13: 371;12/04/2019;8:47:44;;;;;;;;;;;;;;Other Alarm Code: 84;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  14: 372;12/04/2019;8:47:00;;;;;;;;;;;;;;PUMP ALARM LOW BATTERY;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  15: 373;12/04/2019;8:46:15;;;;;;;;;;;;;;Other Alarm Code: 112;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  7. Real data header at row 6: Index;Date;Time;New Device Time;BG Reading (mg/dL);Linked BG Meter ID;Basal Rate (U/h);Temp Basal Amount;Temp Basal Type;Temp Basal Duration (h:mm:ss);Bolus Type;Bolus Volume Selected (U);Bolus Volume
+     Columns: 47
+     Sensor glucose col: 30 ('Sensor Glucose (mg/dL)')
+     Non-empty sensor values: 0
+  8. Date format: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)
+     Sample timestamps: ['12/04/2019 8:54:43', '12/04/2019 8:54:36', '12/04/2019 8:49:25']
+
+======================================================================
+PATIENT: HUPA0019P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0019P/free_style_sensor\HUPA0019P_free_style_sensor_2019-07-03_2019-07-17.csv
+     Size: 66578 bytes  |  Lines: 1621
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: HUPA0019P;;;;;;;;;;;;;;;;;;
+
+  2: ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (raciones);Insulina de acción lenta sin valor numérico;Insulina de acción lenta (unidades);Notas;Gluco
+  3: 58193;3/7/19 10:22;0;170;;;;;;;;;;;;;;;
+
+  4: 58194;3/7/19 10:37;0;161;;;;;;;;;;;;;;;
+
+  5: 58195;3/7/19 10:52;0;151;;;;;;;;;;;;;;;
+
+  6: 58196;3/7/19 11:07;0;139;;;;;;;;;;;;;;;
+
+  7: 58197;3/7/19 11:22;0;128;;;;;;;;;;;;;;;
+
+  8: 58198;3/7/19 11:37;0;123;;;;;;;;;;;;;;;
+
+  9: 58199;3/7/19 11:49;1;;121;;;;;;;;;;;;;;
+
+  10: 58200;3/7/19 11:49;4;;;1;;;;;;;;;;;;;
+
+  11: 58201;3/7/19 11:49;5;;;;;1;;;;;;;;;;;
+
+  12: 58202;3/7/19 11:52;0;121;;;;;;;;;;;;;;;
+
+  13: 58203;3/7/19 12:07;0;146;;;;;;;;;;;;;;;
+
+  14: 58204;3/7/19 12:22;0;206;;;;;;;;;;;;;;;
+
+  15: 58205;3/7/19 12:37;0;240;;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (r
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'0': 1337, '1': 155, '4': 66, '5': 59, '2': 2}
+     Glucose-like cols (40-500): [3, 4]
+  8. Date format detected: no data  |  Ambiguous: False
+  9. Parsed range (day-first):   None to None
+ 10. Preprocessed range: 2019-07-03 14:00:00 to 2019-07-16 11:10:00
+
+[MEDTRONIC] 0 file(s)
+
+======================================================================
+PATIENT: HUPA0022P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0022P/free_style_sensor\HUPA0022P_free_style_sensor_2020-01-16_2020-01-31.csv
+     Size: 69917 bytes  |  Lines: 1535
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: ﻿HUPA0022P;;;;;;;;;;;;;;;;;;
+
+  2: ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (gramos);Insulina de acción lenta sin valor numérico;Insulina de acción lenta (unidades);Notas;Glucosa
+  3: 1,6143E+19;17/1/20 10:04;0;121;;;;;;;;;;;;;;;
+
+  4: 3228;17/1/20 10:17;1;;122;;;;;;;;;;;;;;
+
+  5: 1,6143E+19;17/1/20 10:19;0;123;;;;;;;;;;;;;;;
+
+  6: 1,6143E+19;17/1/20 10:34;0;121;;;;;;;;;;;;;;;
+
+  7: 1,6143E+19;17/1/20 10:49;0;117;;;;;;;;;;;;;;;
+
+  8: 1,6143E+19;17/1/20 11:04;0;116;;;;;;;;;;;;;;;
+
+  9: 1,6143E+19;17/1/20 11:19;0;114;;;;;;;;;;;;;;;
+
+  10: 1,6143E+19;17/1/20 11:34;0;108;;;;;;;;;;;;;;;
+
+  11: 1,6143E+19;17/1/20 11:49;0;104;;;;;;;;;;;;;;;
+
+  12: 1,6143E+19;17/1/20 12:04;0;104;;;;;;;;;;;;;;;
+
+  13: 1,6143E+19;17/1/20 12:19;0;103;;;;;;;;;;;;;;;
+
+  14: 1,6143E+19;17/1/20 12:34;0;103;;;;;;;;;;;;;;;
+
+  15: 1,6143E+19;17/1/20 12:49;0;101;;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): ID;Hora;Tipo de registro;Histórico glucosa (mg/dL);Glucosa leída (mg/dL);Insulina de acción rápida sin valor numérico;Insulina de acción rápida (unidades);Alimentos sin valor numérico;Carbohidratos (g
+     Layout: OLD  |  Columns: 19
+  6. Record types: {'0': 1332, '1': 117, '4': 42, '5': 42}
+     Glucose-like cols (40-500): [3, 4]
+  8. Date format detected: no data  |  Ambiguous: False
+  9. Parsed range (day-first):   None to None
+ 10. Preprocessed range: 2020-01-17 00:35:00 to 2020-01-30 23:45:00
+
+[MEDTRONIC] 0 file(s)
+
+======================================================================
+PATIENT: HUPA0026P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0026P/free_style_sensor\HUPA0026P_free_style_sensor_2020-05-16_2020-11-04.csv
+     Size: 847334 bytes  |  Lines: 16226
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: ﻿Informe del paciente HUPA0026P;Generado el;05-11-2020 00:45 UTC;Generado por;UCM;;;;;;;;;;;;;;
+
+  2: HUPA0026P;;;;;;;;;;;;;;;;;;
+
+  3: Dispositivo;Número de serial;Sello de tiempo del dispositivo;Tipo de registro;Historial de glucosa mg/dL;Escaneo de glucosa mg/dL;Insulina de acción rápida no numérica;Insulina de acción rápida (unidades);Alimento no numérico;Carbohidratos (gramos);Carbohidratos (porciones);Insulina de acción larga 
+  4: FreeStyle Libre;;16/5/20 19:38;0;214;;;;;;;;;;;;;;
+
+  5: FreeStyle Libre;;16/5/20 19:53;0;208;;;;;;;;;;;;;;
+
+  6: FreeStyle Libre;;16/5/20 20:08;0;201;;;;;;;;;;;;;;
+
+  7: FreeStyle Libre;;16/5/20 20:18;1;;199;;;;;;;;;;;;;
+
+  8: FreeStyle Libre;;16/5/20 20:23;0;192;;;;;;;;;;;;;;
+
+  9: FreeStyle Libre;;16/5/20 20:38;0;187;;;;;;;;;;;;;;
+
+  10: FreeStyle Libre;;16/5/20 20:53;1;;180;;;;;;;;;;;;;
+
+  11: FreeStyle Libre;;16/5/20 20:54;0;182;;;;;;;;;;;;;;
+
+  12: FreeStyle Libre;;16/5/20 21:09;0;182;;;;;;;;;;;;;;
+
+  13: FreeStyle Libre;;16/5/20 21:24;0;194;;;;;;;;;;;;;;
+
+  14: FreeStyle Libre;;16/5/20 21:39;0;216;;;;;;;;;;;;;;
+
+  15: FreeStyle Libre;;16/5/20 21:54;0;234;;;;;;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): Dispositivo;Número de serial;Sello de tiempo del dispositivo;Tipo de registro;Historial de glucosa mg/dL;Escaneo de glucosa mg/dL;Insulina de acción rápida no numérica;Insulina de acción rápida (unida
+     Layout: NEW  |  Columns: 19
+  6. Record types: {'0': 13979, '1': 1538, '4': 559, '5': 147}
+     Glucose-like cols (40-500): [4, 5, 9]
+  8. Date format detected: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)  |  Ambiguous: True
+     Sample timestamps: ['16/5/20 19:38', '16/5/20 19:53', '16/5/20 20:08']
+  9. Parsed range (day-first):   2020-05-16 19:38:00 to 2020-11-04 22:40:00
+     Parsed range (month-first): 2020-01-06 00:06:00 to 2020-12-10 23:34:00
+ 10. Preprocessed range: 2020-05-23 00:15:00 to 2020-10-10 23:55:00
+     Raw COVERS or EXCEEDS preprocessed period.
+
+[MEDTRONIC] 0 file(s)
+
+======================================================================
+PATIENT: HUPA0027P
+======================================================================
+
+[FREE STYLE LIBRE] 3 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0027P/free_style_sensor\HUPA0027P_free_style_sensor_2020-06-26_2020-11-04.csv
+     Size: 834376 bytes  |  Lines: 15371
+  2. Encoding: utf-8
+  3. Delimiter: ';'
+  4. First 15 lines:
+  1: ﻿Informe del paciente HUPA0027P;Generado el;05-11-2020 00:43 UTC;Generado por;UCM;;;;;;;;;;;;;;
+
+  2: HUPA0027P;;;;;;;;;;;;;;;;;;
+
+  3: Dispositivo;Número de serial;Sello de tiempo del dispositivo;Tipo de registro;Historial de glucosa mg/dL;Escaneo de glucosa mg/dL;Insulina de acción rápida no numérica;Insulina de acción rápida (unidades);Alimento no numérico;Carbohidratos (gramos);Carbohidratos (porciones);Insulina de acción larga 
+  4: FreeStyle LibreLink;;26/6/20 13:20;0;177;;;;;;;;;;;;;;
+
+  5: FreeStyle LibreLink;;26/6/20 13:25;1;;159;;;;;;;;;;;;;
+
+  6: FreeStyle LibreLink;;26/6/20 13:35;0;166;;;;;;;;;;;;;;
+
+  7: FreeStyle LibreLink;;26/6/20 13:42;1;;154;;;;;;;;;;;;;
+
+  8: FreeStyle LibreLink;;26/6/20 13:50;0;148;;;;;;;;;;;;;;
+
+  9: FreeStyle LibreLink;;26/6/20 13:59;1;;130;;;;;;;;;;;;;
+
+  10: FreeStyle LibreLink;;26/6/20 13:59;4;;;;13;;;;;;;;;;;
+
+  11: FreeStyle LibreLink;;26/6/20 14:05;0;132;;;;;;;;;;;;;;
+
+  12: FreeStyle LibreLink;;26/6/20 14:20;0;117;;;;;;;;;;;;;;
+
+  13: FreeStyle LibreLink;;26/6/20 14:36;0;101;;;;;;;;;;;;;;
+
+  14: FreeStyle LibreLink;;26/6/20 14:38;1;;97;;;;;;;;;;;;;
+
+  15: FreeStyle LibreLink;;26/6/20 14:38;5;;;;;;60;;;;;;;;;
+
+  5. Header (non-empty line 19 cols): Dispositivo;Número de serial;Sello de tiempo del dispositivo;Tipo de registro;Historial de glucosa mg/dL;Escaneo de glucosa mg/dL;Insulina de acción rápida no numérica;Insulina de acción rápida (unida
+     Layout: NEW  |  Columns: 19
+  6. Record types: {'0': 11445, '1': 2802, '4': 634, '5': 487}
+     Glucose-like cols (40-500): [4, 5, 7, 9]
+  8. Date format detected: D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)  |  Ambiguous: True
+     Sample timestamps: ['26/6/20 13:20', '26/6/20 13:25', '26/6/20 13:35']
+  9. Parsed range (day-first):   2020-06-26 13:20:00 to 2020-11-04 23:57:00
+     Parsed range (month-first): 2020-01-07 00:25:00 to 2020-12-10 23:45:00
+ 10. Preprocessed range: 2020-06-26 22:15:00 to 2022-01-21 21:40:00
+     Raw DOES NOT COVER preprocessed period.
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0027P/free_style_sensor\HUPA0027P_free_style_sensor_2021-11-17_2022-01-22.csv
+     Size: 7166626 bytes  |  Lines: 123350
+  2. Encoding: utf-8
+  3. Delimiter: ','
+  4. First 15 lines:
+  1: Informe del paciente HUPA0027P,Generado el,25-03-2022 09:05 UTC,Generado por,UCM
+
+  2: HUPA0027P;
+
+  3: Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unidades),Alimento no numérico,Carbohidratos (gramos),Carbohidratos (porciones),Insulina de acción larga 
+  4: FreeStyle LibreLink,,17-11-2021 11:52,0,124,,,,,,,,,,,,,,
+
+  5: FreeStyle LibreLink,,17-11-2021 12:07,0,125,,,,,,,,,,,,,,
+
+  6: FreeStyle LibreLink,,17-11-2021 12:21,0,111,,,,,,,,,,,,,,
+
+  7: FreeStyle LibreLink,,17-11-2021 12:36,0,106,,,,,,,,,,,,,,
+
+  8: FreeStyle LibreLink,,17-11-2021 12:51,0,105,,,,,,,,,,,,,,
+
+  9: FreeStyle LibreLink,,17-11-2021 13:07,0,110,,,,,,,,,,,,,,
+
+  10: FreeStyle LibreLink,,17-11-2021 13:22,0,121,,,,,,,,,,,,,,
+
+  11: FreeStyle LibreLink,,17-11-2021 13:37,0,126,,,,,,,,,,,,,,
+
+  12: FreeStyle LibreLink,,17-11-2021 13:52,0,113,,,,,,,,,,,,,,
+
+  13: FreeStyle LibreLink,,17-11-2021 14:07,0,96,,,,,,,,,,,,,,
+
+  14: FreeStyle LibreLink,,17-11-2021 14:22,0,91,,,,,,,,,,,,,,
+
+  15: FreeStyle LibreLink,,17-11-2021 14:37,0,89,,,,,,,,,,,,,,
+
+  5. Header (non-empty line 19 cols): Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unida
+     Layout: NEW  |  Columns: 19
+  6. Record types: {'0': 69931, '6': 33589, '1': 14249, '4': 3247, '5': 2331}
+     Glucose-like cols (40-500): [4, 5, 9, 13]
+  8. Date format detected: DD-MM-YYYY HH:MM  |  Ambiguous: False
+     Sample timestamps: ['17-11-2021 11:52', '17-11-2021 12:07', '17-11-2021 12:21']
+  9. Parsed range (day-first):   2019-11-27 19:51:00 to 2022-01-22 17:50:00
+ 10. Preprocessed range: 2020-06-26 22:15:00 to 2022-01-21 21:40:00
+     Raw COVERS or EXCEEDS preprocessed period.
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0027P/free_style_sensor\HUPA0027P_free_style_sensor_2022-01-21.csv
+     Size: 7166629 bytes  |  Lines: 123350
+  2. Encoding: utf-8
+  3. Delimiter: ','
+  4. First 15 lines:
+  1: Informe del paciente HUPA0027P,Generado el,10-03-2022 09:26 UTC,Generado por,UCM
+
+  2: HUPA0027P;
+
+  3: Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unidades),Alimento no numérico,Carbohidratos (gramos),Carbohidratos (porciones),Insulina de acción larga 
+  4: FreeStyle LibreLink,,17-11-2021 11:52,0,124,,,,,,,,,,,,,,
+
+  5: FreeStyle LibreLink,,17-11-2021 12:07,0,125,,,,,,,,,,,,,,
+
+  6: FreeStyle LibreLink,,17-11-2021 12:21,0,111,,,,,,,,,,,,,,
+
+  7: FreeStyle LibreLink,,17-11-2021 12:36,0,106,,,,,,,,,,,,,,
+
+  8: FreeStyle LibreLink,,17-11-2021 12:51,0,105,,,,,,,,,,,,,,
+
+  9: FreeStyle LibreLink,,17-11-2021 13:07,0,110,,,,,,,,,,,,,,
+
+  10: FreeStyle LibreLink,,17-11-2021 13:22,0,121,,,,,,,,,,,,,,
+
+  11: FreeStyle LibreLink,,17-11-2021 13:37,0,126,,,,,,,,,,,,,,
+
+  12: FreeStyle LibreLink,,17-11-2021 13:52,0,113,,,,,,,,,,,,,,
+
+  13: FreeStyle LibreLink,,17-11-2021 14:07,0,96,,,,,,,,,,,,,,
+
+  14: FreeStyle LibreLink,,17-11-2021 14:22,0,91,,,,,,,,,,,,,,
+
+  15: FreeStyle LibreLink,,17-11-2021 14:37,0,89,,,,,,,,,,,,,,
+
+  5. Header (non-empty line 19 cols): Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unida
+     Layout: NEW  |  Columns: 19
+  6. Record types: {'0': 69931, '6': 33589, '1': 14249, '4': 3247, '5': 2331}
+     Glucose-like cols (40-500): [4, 5, 9, 13]
+  8. Date format detected: DD-MM-YYYY HH:MM  |  Ambiguous: False
+     Sample timestamps: ['17-11-2021 11:52', '17-11-2021 12:07', '17-11-2021 12:21']
+  9. Parsed range (day-first):   2019-11-27 19:51:00 to 2022-01-22 17:50:00
+ 10. Preprocessed range: 2020-06-26 22:15:00 to 2022-01-21 21:40:00
+     Raw COVERS or EXCEEDS preprocessed period.
+
+[MEDTRONIC] 0 file(s)
+
+======================================================================
+PATIENT: HUPA0028P
+======================================================================
+
+[FREE STYLE LIBRE] 1 file(s)
+
+  1. Path: data/HUPA-UCM/Raw_Data/HUPA0028P/free_style_sensor\HUPA0028P_free_style_sensor_2020-08-09_2022-04-24.csv
+     Size: 3546711 bytes  |  Lines: 60474
+  2. Encoding: utf-8
+  3. Delimiter: ','
+  4. First 15 lines:
+  1: Informe del paciente HUPA0028P,Generado el,24-04-2022 18:29 UTC,Generado por,UCM
+
+  2: HUPA0028P,
+
+  3: Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unidades),Alimento no numérico,Carbohidratos (gramos),Carbohidratos (porciones),Insulina de acción larga 
+  4: FreeStyle LibreLink,,08-09-2020 14:49,0,124,,,,,,,,,,,,,,
+
+  5: FreeStyle LibreLink,,08-09-2020 15:04,0,115,,,,,,,,,,,,,,
+
+  6: FreeStyle LibreLink,,08-09-2020 15:19,0,92,,,,,,,,,,,,,,
+
+  7: FreeStyle LibreLink,,08-09-2020 15:34,0,73,,,,,,,,,,,,,,
+
+  8: FreeStyle LibreLink,,08-09-2020 15:49,0,54,,,,,,,,,,,,,,
+
+  9: FreeStyle LibreLink,,08-09-2020 16:04,0,66,,,,,,,,,,,,,,
+
+  10: FreeStyle LibreLink,,08-09-2020 16:19,0,63,,,,,,,,,,,,,,
+
+  11: FreeStyle LibreLink,,08-09-2020 16:34,0,65,,,,,,,,,,,,,,
+
+  12: FreeStyle LibreLink,,08-09-2020 16:49,0,60,,,,,,,,,,,,,,
+
+  13: FreeStyle LibreLink,,08-09-2020 17:04,0,55,,,,,,,,,,,,,,
+
+  14: FreeStyle LibreLink,,08-09-2020 17:19,0,54,,,,,,,,,,,,,,
+
+  15: FreeStyle LibreLink,,08-09-2020 17:34,0,54,,,,,,,,,,,,,,
+
+  5. Header (non-empty line 19 cols): Dispositivo,Número de serial,Sello de tiempo del dispositivo,Tipo de registro,Historial de glucosa mg/dL,Escaneo de glucosa mg/dL,Insulina de acción rápida no numérica,Insulina de acción rápida (unida
+     Layout: NEW  |  Columns: 19
+  6. Record types: {'0': 50275, '1': 7809, '6': 1998, '4': 212, '5': 177}
+     Glucose-like cols (40-500): [4, 5, 9]
+  8. Date format detected: DD-MM-YYYY HH:MM  |  Ambiguous: False
+     Sample timestamps: ['08-09-2020 14:49', '08-09-2020 15:04', '08-09-2020 15:19']
+  9. Parsed range (day-first):   2020-09-08 13:47:00 to 2022-04-24 14:10:00
+ 10. Preprocessed range: 2022-02-17 13:50:00 to 2022-05-18 12:15:00
+     Raw DOES NOT COVER preprocessed period.
+
+[MEDTRONIC] 0 file(s)
+
+
+======================================================================
+SUMMARY TABLE — ALL 25 PATIENTS
+======================================================================
+  patient  libre_files  libre_lines libre_delim libre_lang libre_layout                                      libre_date_fmt  n_type0_readings  med_files  med_has_sensor_glucose        raw_start          raw_end       prep_start         prep_end
+HUPA0001P            1         1550         ';'    Spanish          OLD                                             no data              1331          1                    True                                   2018-06-13 18:40 2018-06-27 23:55
+HUPA0002P            1         1503         ';'    Spanish          OLD                                             no data              1326          0                   False                                   2018-06-13 22:45 2018-06-24 23:45
+HUPA0003P            1         1483        '\t'    Spanish          OLD                                             no data              1334          1                    True                                   2018-06-13 21:40 2018-06-26 23:45
+HUPA0004P            1          973        '\t'    Spanish          OLD                                             no data               904          0                   False                                   2018-07-09 15:30 2018-07-20 16:45
+HUPA0005P            1         1556        '\t'    Spanish          OLD                                             no data              1333          1                    True                                   2018-07-09 14:20 2018-07-22 23:45
+HUPA0006P            1          787        '\t'    Spanish          OLD                                             no data               728          1                    True                                   2018-07-09 15:45 2018-07-17 14:30
+HUPA0007P            1         1568        '\t'    Spanish          OLD                                    YYYY/MM/DD HH:MM              1335          1                    True 2018-12-09 20:36 2018-12-09 20:36 2018-09-19 14:25 2018-10-02 23:45
+HUPA0009P            1            4        '\t'    Spanish          OLD                                             no data                 0          1                    True                                   2018-09-19 14:35 2018-10-02 20:10
+HUPA0010P            1          392         ';'    Spanish          OLD D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)                 0          1                    True 2018-11-07 15:20 2018-11-07 15:20 2018-11-07 15:35 2018-11-17 23:30
+HUPA0011P            1         5025         ';'    Spanish          OLD                                    YYYY/MM/DD HH:MM              4266          0                   False 2018-07-11 14:48 2018-12-09 20:43 2018-11-07 15:55 2018-11-20 23:45
+HUPA0014P            1         1340        '\t'    Spanish          OLD                                    YYYY/MM/DD HH:MM              1132          0                   False 2018-09-11 16:09 2018-09-11 16:09 2018-11-07 16:45 2018-11-20 23:45
+HUPA0015P            1         1265        '\t'    Spanish          OLD                                             no data              1263          0                   False                                   2019-03-27 16:15 2019-04-09 20:10
+HUPA0016P            1         6628        '\t'    Spanish          OLD                                    YYYY/MM/DD HH:MM              5949          1                    True 2016-04-02 09:09 2019-03-31 08:49 2019-03-27 16:15 2019-04-09 23:45
+HUPA0017P            1         1502         ';'    Spanish          OLD D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)              1235          0                   False 2019-04-17 13:30 2019-04-17 13:30 2019-03-28 12:00 2019-04-09 23:50
+HUPA0018P            1         1420         ';'    Spanish          OLD                                             no data              1314          0                   False                                   2019-07-03 11:15 2019-07-16 23:45
+HUPA0019P            1         1621         ';'    Spanish          OLD                                             no data              1337          0                   False                                   2019-07-03 14:00 2019-07-16 11:10
+HUPA0020P            1         1435         ';'    Spanish          OLD                                             no data              1315          0                   False                                   2019-07-03 20:15 2019-07-13 18:40
+HUPA0021P            1         1586         ';'    Spanish          OLD                                             no data              1331          0                   False                                   2019-07-03 12:25 2019-07-11 15:35
+HUPA0022P            1         1535         ';'    Spanish          OLD                                             no data              1332          0                   False                                   2020-01-17 00:35 2020-01-30 23:45
+HUPA0023P            1         1631         ';'    Spanish          OLD                                             no data              1333          0                   False                                   2020-01-17 00:00 2020-01-30 14:30
+HUPA0024P            1         2922         ';'    Spanish          OLD D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)              1329          0                   False 2020-01-15 12:39 2020-01-15 12:39 2020-01-20 11:30 2020-01-30 13:15
+HUPA0025P            1         1818         ';'    Spanish          NEW D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)              1323          0                   False 2020-01-16 12:46 2020-01-30 13:42 2020-01-16 13:45 2020-01-30 11:30
+HUPA0026P            1        16226         ';'    Spanish          NEW D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)             13979          0                   False 2020-05-16 19:38 2020-11-04 22:40 2020-05-23 00:15 2020-10-10 23:55
+HUPA0027P            3        15371         ';'    Spanish          NEW D/M/YY HH:MM or DD/M/YY HH:MM (day-first ambiguous)             11445          0                   False 2020-06-26 13:20 2020-11-04 23:57 2020-06-26 22:15 2022-01-21 21:40
+HUPA0028P            1        60474         ','    Spanish          NEW                                    DD-MM-YYYY HH:MM             50275          0                   False 2020-09-08 13:47 2022-04-24 14:10 2022-02-17 13:50 2022-05-18 12:15

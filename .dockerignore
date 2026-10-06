@@ -1,0 +1,34 @@
+# Allow-list: exclude EVERYTHING, then re-include only what the production image needs.
+# Never re-include: data/, results*/, outputs*/, model_artifact.pkl, unused models, .git, tests, .env.
+**
+
+# research modules imported by the backend (unchanged)
+!data_processing.py
+!objective3_common.py
+!evaluate_loso.py
+!parsers/__init__.py
+!parsers/hupa_ucm.py
+
+# backend runtime
+!backend/__init__.py
+!backend/app/**
+!backend/demo_data/synthetic_01.csv
+!backend/deploy/artifact_manifest.json
+!backend/scripts/verify_artifacts.py
+!backend/scripts/reference.py
+!backend/reference/**
+!backend/requirements-lock.txt
+
+# the six deployment artifacts
+!models_objective3/LightGBM.joblib
+!models_objective3/imputer.joblib
+!models_objective3/scaler.joblib
+!models_objective3/feature_list.json
+!models_objective3/settings.json
+!models_objective3/model_hashes.json
+
+# never, even inside allowed folders
+**/__pycache__
+**/*.pyc
+**/.env*
+**/*.log
