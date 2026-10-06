@@ -1,0 +1,19 @@
+# syntax=docker/dockerfile:1
+# Test image: runs the backend test suite on Linux WITHOUT private research data.
+# Uses Dockerfile.test.dockerignore (BuildKit). Not deployed.
+# Build+run:  docker build -f Dockerfile.test -t glucose-api-test . && docker run --rm glucose-api-test
+FROM python:3.13.9-slim-bookworm
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    MPLBACKEND=Agg MPLCONFIGDIR=/tmp/matplotlib GLUCOSE_TESTS_NO_RESEARCH_DATA=1
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY backend/requirements-lock.txt backend/requirements-dev.txt backend/
+RUN pip install --no-deps --only-binary=:all: -r backend/requirements-lock.txt -r backend/requirements-dev.txt \
+ && pip check
+COPY data_processing.py objective3_common.py evaluate_loso.py Dockerfile .dockerignore ./
+COPY parsers/__init__.py parsers/hupa_ucm.py parsers/
+COPY backend/ backend/
+COPY models_objective3/LightGBM.joblib models_objective3/imputer.joblib models_objective3/scaler.joblib \
+     models_objective3/feature_list.json models_objective3/settings.json models_objective3/model_hashes.json \
+     models_objective3/
+CMD ["sh", "-c", "python backend/scripts/verify_artifacts.py models_objective3 && python backend/scripts/reference.py verify && python -m pytest backend/tests -q"]

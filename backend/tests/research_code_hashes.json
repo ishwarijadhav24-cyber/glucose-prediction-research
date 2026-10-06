@@ -1,0 +1,9 @@
+{
+ "note": "SHA-256 (LF-normalised) of the research modules the backend imports. A change here means the serving pipeline may no longer match the trained model; re-verify parity before updating.",
+ "files": {
+  "data_processing.py": "0c4dd02fbc9343a0deb2595905de1f6ed1d24acc945d4e52c42c522aa99a5eed",
+  "objective3_common.py": "b031e56f1d4746316cdf81acbd5ede9becc2b668179aed5f1fa7e36df9640636",
+  "evaluate_loso.py": "3568499eef4f84ce6685dbb18585658f11cb8d07de3819cb53f71f61d9e6ab29",
+  "parsers/hupa_ucm.py": "293ce0a0b9295538a90ca1a12c80d19c6978b9e3ede5b8ef4540bb6119b31339"
+ }
+}

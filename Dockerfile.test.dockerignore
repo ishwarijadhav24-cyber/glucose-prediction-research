@@ -1,0 +1,20 @@
+# Allow-list for Dockerfile.test (test image only; never deployed). Still no private data or results.
+**
+!data_processing.py
+!objective3_common.py
+!evaluate_loso.py
+!parsers/__init__.py
+!parsers/hupa_ucm.py
+!Dockerfile
+!.dockerignore
+!backend/**
+!models_objective3/LightGBM.joblib
+!models_objective3/imputer.joblib
+!models_objective3/scaler.joblib
+!models_objective3/feature_list.json
+!models_objective3/settings.json
+!models_objective3/model_hashes.json
+**/__pycache__
+**/*.pyc
+**/.env*
+**/*.log

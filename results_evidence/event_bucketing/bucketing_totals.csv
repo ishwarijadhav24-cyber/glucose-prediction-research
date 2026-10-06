@@ -1,0 +1,2 @@
+total_eligible,affected_bolus,affected_meal,affected_any,training_rows,training_rows_affected,MARD_research_mean,MARD_causal_mean,RMSE_research_mean,RMSE_causal_mean
+167376,3189,1016,3882,169221,4055,9.628129962267403,9.63094848258945,19.297046888417242,19.341286249209205

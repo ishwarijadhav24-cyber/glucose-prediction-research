@@ -1,0 +1,153 @@
+{
+  "model_name": "LightGBM",
+  "model_version": "cd7e2d54f5b4",
+  "feature_version": "1e58d04b100d",
+  "n_features": 47,
+  "prediction_horizon_minutes": 30,
+  "sampling_interval_minutes": 5,
+  "training_data": "OhioT1DM, 12 patients, 169221 feature rows (causal 5-minute grid; training + testing XML files)",
+  "library_versions": {
+    "python": "3.13.9",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.7.2",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3"
+  },
+  "research_evaluation": {
+    "label": "Research evaluation results (population averages). Not a guarantee for any single prediction.",
+    "methodology": "Leave-one-subject-out cross-validation on OhioT1DM (train on 11 patients, test on the held-out patient; repeated for all 12). The deployed model uses the same pipeline and settings, trained on all 12 patients.",
+    "n_patients": 12,
+    "aggregation": "metric computed per patient, then mean and SD across patients",
+    "MARD_percent": {
+      "mean": 10.03,
+      "sd": 1.52
+    },
+    "RMSE_mg_dl": {
+      "mean": 20.33,
+      "sd": 2.66
+    },
+    "MAE_mg_dl": {
+      "mean": 14.24,
+      "sd": 1.76
+    },
+    "R2": {
+      "mean": 0.875,
+      "sd": 0.028
+    },
+    "clarke_A_plus_B_percent": {
+      "mean": 98.0,
+      "sd": 1.19
+    },
+    "clarke_note": "Clarke A+B is the share of research predictions in clinically acceptable zones A or B, averaged over patients. It does not mean each individual prediction is that accurate. The Persistence baseline also reaches a high Clarke A+B, so A+B alone does not show that the model is better than Persistence.",
+    "persistence_reference": {
+      "MARD_percent": {
+        "mean": 12.11,
+        "sd": 1.92
+      },
+      "RMSE_mg_dl": {
+        "mean": 24.82,
+        "sd": 3.1
+      },
+      "R2": {
+        "mean": 0.814,
+        "sd": 0.037
+      },
+      "clarke_A_plus_B_percent": {
+        "mean": 98.61,
+        "sd": 0.68
+      }
+    },
+    "model_selection_note": "LightGBM is not the single best model by MARD: Stacking and MLP are essentially tied with it. It was selected for deployment because its MARD is essentially tied with the best-performing models while it gives strong RMSE/R2 and a simpler single-model deployment."
+  },
+  "external_validation": {
+    "label": "Research external transfer evaluation on a different dataset (no retraining).",
+    "dataset": "HUPA-UCM (FreeStyle Libre, ~15-minute readings)",
+    "MAIN": {
+      "n_patients": 19,
+      "MARD_percent": {
+        "mean": 13.38,
+        "sd": 1.92
+      },
+      "RMSE_mg_dl": {
+        "mean": 21.95,
+        "sd": 4.16
+      },
+      "clarke_A_plus_B_percent": {
+        "mean": 95.74,
+        "sd": 2.02
+      }
+    },
+    "ALL": {
+      "n_patients": 23,
+      "MARD_percent": {
+        "mean": 13.49,
+        "sd": 2.0
+      },
+      "RMSE_mg_dl": {
+        "mean": 22.46,
+        "sd": 3.96
+      },
+      "clarke_A_plus_B_percent": {
+        "mean": 95.82,
+        "sd": 2.03
+      }
+    },
+    "persistence_reference": {
+      "MAIN": {
+        "MARD_percent": {
+          "mean": 13.03,
+          "sd": 2.0
+        },
+        "clarke_A_plus_B_percent": {
+          "mean": 97.89,
+          "sd": 0.75
+        }
+      }
+    },
+    "lightgbm_vs_persistence_MAIN": {
+      "n_patients_lightgbm_better": 10,
+      "n_patients": 19,
+      "wilcoxon_p": 0.95
+    },
+    "note": "HUPA-UCM serves as an external transfer evaluation without retraining. Performance decreased relative to OhioT1DM, and LightGBM did not significantly outperform Persistence on HUPA-UCM. This demonstrates transferability of the pipeline, but does not establish clinical generalization or superiority on a new population. Part of the drop is explained by the ~15-minute sampling, which is not equivalent to native 5-minute CGM."
+  },
+  "limitations": [
+    "Research demonstration only. Not a medical device.",
+    "Not for diagnosis, treatment decisions or insulin dosing. Does not replace a CGM.",
+    "Trained on 5-minute CGM data from 12 OhioT1DM patients only.",
+    "Least accurate below 70 mg/dL (research MARD 33.1% vs 24.0% for Persistence); not suitable for low-glucose alerts.",
+    "Heart rate is not effectively used: the available OhioT1DM heart-rate signal was not correctly mapped by the current research pipeline, so this feature was always missing and imputed to a constant. Known limitation and future work item.",
+    "On HUPA-UCM (~15-minute FreeStyle Libre data) LightGBM did not significantly outperform Persistence.",
+    "Research-time insulin and meal event bucketing uses 5-minute floor aggregation, which can expose up to 4:59 of event-time look-ahead on about 2.3% of rows. A sensitivity analysis showed only a small aggregate effect (MARD 9.628 vs 9.631). The deployed inference pipeline excludes events after the prediction time and is strictly causal."
+  ],
+  "sources": {
+    "loso_summary": {
+      "path": "results_causal/loso_summary.csv",
+      "sha256": "ef93a79a7217e88dceb066808930bb8bec202300277ef9ffa6c4f393ab2e0b6b"
+    },
+    "loso_patient_results": {
+      "path": "results_causal/loso_patient_results.csv",
+      "sha256": "c2cced015952ebfa5ce98c58d0551aef8b2e4923404eba17af9cd72a284b6a03"
+    },
+    "hupa_summary_main": {
+      "path": "results_objective3/hupa_summary_main.csv",
+      "sha256": "36e1626570af35decc711893d98fc937e4cd2f73b3068f17e1504db56a9b5850"
+    },
+    "hupa_summary_all": {
+      "path": "results_objective3/hupa_summary_all.csv",
+      "sha256": "576b8f3e460c6b60a477dfe8dcec6e106626626718ac2a1958cfe56512f86631"
+    },
+    "hupa_vs_persistence": {
+      "path": "results_evidence/C2_hupa_vs_persistence.csv",
+      "sha256": "0d910300a6b8d99cde1c4f281bd24c9eab8e996872451084186a07b6a6e79245"
+    },
+    "metrics_by_glucose_range": {
+      "path": "results_evidence/C5_metrics_by_glucose_range.csv",
+      "sha256": "df233446cb352c9262b58c89b7def645bdd56c79022d41faf67807a62890c668"
+    },
+    "event_bucketing": {
+      "path": "results_evidence/event_bucketing/bucketing_totals.csv",
+      "sha256": "00634a3f2566c467ebc18998b4387058b6a5540a9920b390f3b446d9f74f2e23"
+    }
+  }
+}

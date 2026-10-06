@@ -1,0 +1,13 @@
+{
+ "note": "Full SHA-256 of the deployment artifacts (copied unchanged from models_objective3/, produced by train_final_ohio.py). Fixed at validation time; checked at image build and at start-up via model_hashes.json.",
+ "source_dir": "models_objective3",
+ "model": "LightGBM",
+ "files": {
+  "LightGBM.joblib": "cd7e2d54f5b4b470006b1eac268c1078dbec5dc77febe1ca149882fa446fd8fc",
+  "imputer.joblib": "aa44d8bcd9868849110b3338291d5cda2a6960d357e9149292f44a743cd30236",
+  "scaler.joblib": "15a02d5df00d74d0bf8a4689266d174533ba13eb34a1fb571a5946088de1cefa",
+  "feature_list.json": "1e58d04b100d8e8a15a250b51f59a7b91f6fa6b15eef85581d0ae124c25b8fc1",
+  "settings.json": "49b73753e9a0026f8dd271b515a1c5f40a25e6c0da2239eb3663327f0fb04e1a",
+  "model_hashes.json": "08a327166c084f9e439a8f08fc601706eed64b0bd6682d6f871c51bab9cf19b8"
+ }
+}

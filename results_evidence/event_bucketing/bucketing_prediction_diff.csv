@@ -1,0 +1,2 @@
+n_affected,n_compared,n_causal_refused,mean_abs_diff,median_abs_diff,p95_abs_diff,max_abs_diff,pct_diff_over_1_mg_dl,pct_diff_over_5_mg_dl
+3882,3653,229,5.5863250090699825,2.870873815947334,18.575334036305996,43.48789244169845,66.02792225568027,39.009033670955375
