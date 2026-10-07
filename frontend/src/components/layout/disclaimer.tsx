@@ -2,24 +2,31 @@
 import React, { useState } from "react";
 import { AlertTriangle, X } from "lucide-react";
 
+export const DISCLAIMER =
+  "Research demonstration only. Not a medical device. Not for diagnosis, treatment decisions or insulin dosing. Does not replace a CGM.";
+
 export function Disclaimer() {
   const [isVisible, setIsVisible] = useState(true);
-
   if (!isVisible) return null;
-
   return (
-    <div className="bg-destructive/10 text-destructive text-sm px-4 py-2.5 flex items-start sm:items-center justify-center gap-3 border-b border-destructive/20 w-full z-50 relative">
-      <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5 sm:mt-0" />
-      <p className="leading-tight max-w-[80rem] pr-6">
-        <strong>RESEARCH USE ONLY.</strong> This application is for demonstration and research purposes only. It is not a medical device, nor is it intended for clinical diagnosis, treatment, or medical decision making. Always consult a healthcare professional.
-      </p>
-      <button 
-        onClick={() => setIsVisible(false)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-destructive/70 hover:text-destructive transition-colors"
-        aria-label="Dismiss disclaimer"
-      >
-        <X className="w-5 h-5" />
+    <div className="bg-amber-500/10 text-amber-800 dark:text-amber-300 text-xs sm:text-sm px-4 py-2 flex items-center justify-center gap-2 border-b border-amber-500/20 relative">
+      <AlertTriangle className="w-4 h-4 shrink-0" />
+      <p className="pr-6">{DISCLAIMER}</p>
+      <button onClick={() => setIsVisible(false)} aria-label="Dismiss disclaimer"
+        className="absolute right-3 top-1/2 -translate-y-1/2 opacity-70 hover:opacity-100">
+        <X className="w-4 h-4" />
       </button>
     </div>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="border-t mt-16">
+      <div className="container max-w-screen-xl py-8 text-xs text-muted-foreground flex flex-col sm:flex-row justify-between gap-3">
+        <p>30-minute blood glucose forecasting · Group 19, PCCoE (AI &amp; ML) · OhioT1DM and HUPA-UCM datasets.</p>
+        <p>{DISCLAIMER}</p>
+      </div>
+    </footer>
   );
 }

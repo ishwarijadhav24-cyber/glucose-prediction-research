@@ -16,8 +16,10 @@ export const PredictionSchema = z.object({
   latest_observation_time: z.string(),
   forecast_time: z.string(),
   horizon_minutes: z.number(),
+  actual_glucose_mg_dl_at_forecast_time: z.number().nullable().optional(),
 });
 export type Prediction = z.infer<typeof PredictionSchema>;
+export const API_BASE_URL = API_BASE;
 
 export const DemoPatientSummarySchema = z.object({
   patient_id: z.string(),
@@ -118,7 +120,7 @@ async function fetchApi<T>(path: string, options?: RequestInit): Promise<T> {
     } else if (response.status === 400) {
       message = "Bad request (400). Please check your file.";
     } else if (response.status === 413) {
-      message = "File too large (413). Max size is 50MB.";
+      message = "The upload is too large (413). The backend limit is 25 MB in total.";
     } else if (response.status === 415) {
       message = "Unsupported media type (415). Please upload CSV or XML.";
     } else if (response.status === 422) {

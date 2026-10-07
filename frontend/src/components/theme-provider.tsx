@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as React from "react";
@@ -14,45 +13,40 @@ type ThemeProviderProps = {
 
 const ThemeProviderContext = React.createContext<{
   theme: Theme;
+  resolvedTheme: "dark" | "light";
   setTheme: (theme: Theme) => void;
 }>({
   theme: "system",
+  resolvedTheme: "light",
   setTheme: () => null,
 });
 
-export function ThemeProvider({
-  children,
-  defaultTheme = "system",
-  enableSystem = true,
-  disableTransitionOnChange = false,
-}: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = "system", enableSystem = true }: ThemeProviderProps) {
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);
+  const [systemDark, setSystemDark] = React.useState(false);
+
+  React.useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    setSystemDark(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setSystemDark(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  const resolvedTheme: "dark" | "light" =
+    theme === "system" ? (enableSystem && systemDark ? "dark" : "light") : theme;
 
   React.useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
-
-    if (theme === "system" && enableSystem) {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-      root.classList.add(systemTheme);
-      return;
-    }
-
-    root.classList.add(theme);
-  }, [theme, enableSystem]);
+    root.classList.add(resolvedTheme);
+  }, [resolvedTheme]);
 
   return (
-    <ThemeProviderContext.Provider value={{ theme, setTheme }}>
+    <ThemeProviderContext.Provider value={{ theme, resolvedTheme, setTheme }}>
       {children}
     </ThemeProviderContext.Provider>
   );
 }
 
-export const useTheme = () => {
-  const context = React.useContext(ThemeProviderContext);
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
-};
+export const useTheme = () => React.useContext(ThemeProviderContext);

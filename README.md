@@ -156,7 +156,14 @@ Interactive docs: `/docs` while the server runs.
 
 ## 9. Running the backend locally
 
-Requires Python 3.13. The backend refuses to start unless lightgbm 4.7.0, scikit-learn 1.7.2, numpy 2.3.5
+**Easiest (Windows):** double-click `start-local.bat` in the repository root. It starts the backend (port 7860)
+and the website (port 3000) in their own windows, restarts the backend automatically if it stops, waits until both
+answer and opens http://localhost:3000. Running it again when everything is already up does nothing. Close the two
+windows to stop. The website runs as a pre-built production server (pages open instantly); it is rebuilt
+automatically after code changes. While editing the website code, use `start-local.bat -Dev` for live reload
+(slower: each page compiles on its first visit).
+
+To start the backend by hand instead: requires Python 3.13. The backend refuses to start unless lightgbm 4.7.0, scikit-learn 1.7.2, numpy 2.3.5
 and pandas 2.3.3 are installed exactly (they must match the trained artifacts).
 
 ```bash
