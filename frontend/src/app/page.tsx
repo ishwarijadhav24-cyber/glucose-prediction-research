@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Activity, BrainCircuit, ShieldAlert, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { ResearchObjectives } from "@/components/research-objectives";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-[42rem] leading-normal sm:leading-8">
-            A state-of-the-art LightGBM architecture for continuous glucose monitoring (CGM). 
+            A LightGBM architecture for continuous glucose monitoring (CGM). 
             Predicting 30 minutes into the future with strict causal adherence.
           </p>
 
@@ -52,7 +53,7 @@ export default function Home() {
       <section className="py-24 bg-muted/30 border-t">
         <div className="container max-w-screen-xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Architecture & Capabilities</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">Architecture &amp; Capabilities</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Built on rigorous causal inference principles to ensure predictions rely solely on strictly historical data.
             </p>
@@ -75,6 +76,44 @@ export default function Home() {
               description="No future leakage. All features are constructed using only data available at the exact prediction time."
             />
           </div>
+        </div>
+      </section>
+
+      {/* Research Objectives Section */}
+      <ResearchObjectives />
+
+      {/* Live Demonstration CTA */}
+      <section className="py-20 bg-muted/30 border-t">
+        <div className="container max-w-screen-xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground mb-4">
+              Live Demonstration
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
+              Try It Yourself
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-sm leading-relaxed">
+              The research metrics above describe evaluated population-level results.
+              The live demo generates an individual forecast from the deployed LightGBM model.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="h-12 px-8 text-base group" asChild>
+                <Link href="/demo">
+                  Explore Demo Patients
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8 text-base" asChild>
+                <Link href="/upload">
+                  Upload Your Own Data
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
