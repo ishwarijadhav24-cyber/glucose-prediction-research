@@ -44,6 +44,9 @@ class Prediction(BaseModel):
     latest_observation_time: datetime = Field(description="Last real glucose reading used (<= prediction_time)")
     forecast_time: datetime = Field(description="prediction_time + horizon")
     horizon_minutes: int
+    actual_glucose_mg_dl_at_forecast_time: Optional[float] = Field(
+        default=None, description="Recorded glucose at forecast_time, if available (for evaluation). Never used as input."
+    )
 
 
 class PredictionResponse(BaseModel):
@@ -86,6 +89,16 @@ class UploadPredictionResponse(BaseModel):
     skipped: dict[str, int]
     preprocessing: list[str] = Field(description="Exactly what was done to the uploaded data")
     model: ModelRef
+    warnings: list[str]
+    disclaimer: str = DISCLAIMER
+
+
+class UploadEvaluationResponse(BaseModel):
+    status: Literal["success"] = "success"
+    dataset: DatasetSummary
+    history_days: float
+    evaluation_days: float
+    predictions: list[Prediction]
     warnings: list[str]
     disclaimer: str = DISCLAIMER
 

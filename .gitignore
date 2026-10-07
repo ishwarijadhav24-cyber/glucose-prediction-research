@@ -7,3 +7,6 @@ data/
 
 
 .claude/
+.pytest_cache/
+node_modules/
+.next/

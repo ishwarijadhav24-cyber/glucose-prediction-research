@@ -23,7 +23,8 @@ from objective3_common import apply_preprocessing
 
 HASHES = json.loads((REPO_ROOT / "backend" / "tests" / "research_code_hashes.json").read_text())["files"]
 PUBLIC_PATHS = {"/health", "/api/v1/health", "/api/v1/model", "/api/v1/demo/patients",
-                "/api/v1/demo/patients/{patient_id}", "/api/v1/predict/demo/{patient_id}", "/api/v1/predict/upload"}
+                "/api/v1/demo/patients/{patient_id}", "/api/v1/predict/demo/{patient_id}", "/api/v1/predict/upload",
+                "/api/v1/evaluate/upload"}
 
 
 @pytest.fixture(scope="module")
@@ -142,7 +143,9 @@ def test_endpoint_inventory(client):
     assert set(spec["paths"]) == PUBLIC_PATHS                      # nothing else is exposed
     methods = {p: set(v) for p, v in spec["paths"].items()}
     assert methods["/api/v1/predict/upload"] == {"post"} and methods["/api/v1/model"] == {"get"}
+    assert methods["/api/v1/evaluate/upload"] == {"post"}
     assert "multipart/form-data" in spec["paths"]["/api/v1/predict/upload"]["post"]["requestBody"]["content"]
+    assert "multipart/form-data" in spec["paths"]["/api/v1/evaluate/upload"]["post"]["requestBody"]["content"]
 
 
 def test_wrong_method_is_structured(client):
@@ -179,7 +182,7 @@ def test_single_forecast_no_recursion(client, events):
     assert isinstance(a["prediction"]["predicted_glucose_mg_dl"], float)
     assert a["prediction"] == b["prediction"]
     assert set(a["prediction"]) == {"predicted_glucose_mg_dl", "prediction_time", "latest_observation_time",
-                                    "forecast_time", "horizon_minutes"}
+                                    "forecast_time", "horizon_minutes", "actual_glucose_mg_dl_at_forecast_time"}
 
 
 def test_no_medical_claims_in_public_text(client):
